@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeForCart } from '../redux/store'
 import "../assets/css/shop.css"
+import jsPDF from 'jspdf'
+import autoTable from 'jspdf-autotable'
 
 const Shop = () => {
     const [product, setProduct] = useState([])
@@ -14,6 +16,31 @@ const Shop = () => {
     const dispatch = useDispatch()
     const cartList = useSelector((state)=>state.cart)
     const [cart, setCart] = useState([])
+
+    const handleexportpdf=()=>{
+        const doc = new jsPDF()
+        const tableColum = ["product","quantity","price","total"]
+        const tableRow = cart.map((product)=>[
+            product.name,
+            product.quantity,
+            `${product.price}Baht`,
+            `${product.total} Baht`
+        ])
+        tableRow.push(["summaryprice","","",`${cartList.total}Baht`])
+        const currentDate = new Date();
+          const formattedDate = `${currentDate.getFullYear()}-${("0" + (currentDate.getDate())).slice(-2)}-${("0" + (currentDate.getMonth() + 1)).slice(-2)}`;
+    
+          doc.setFontSize(10)
+          doc.text(`Date: ${formattedDate}`, 10, 10);
+          doc.text(`Thank you!`, 180, 10);
+          autoTable(doc,{
+            head:[tableColum],
+            body:tableRow,
+            startY:20
+          })
+          doc.save(`bill-${formattedDate}.pdf`)
+    }
+
     useEffect(() => {
         setProduct(getAllProductBymenuId(id))
         setCart(cartList.products)
@@ -74,7 +101,7 @@ const Shop = () => {
                                 </tbody>
                             </table>
                             <div className="box-table-btn">
-                                <button className='export-pdf-btn table-btn'>export pdf</button>
+                                <button onClick={handleexportpdf} className='export-pdf-btn table-btn'>export pdf</button>
                                 <button className='addline-btn table-btn'>add line</button>
                             </div>
                         </div>

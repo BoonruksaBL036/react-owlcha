@@ -8,3 +8,11 @@ body{
   width: 100vw;
   height: 100vh;
 }
+
+.container {
+  padding: 3rem 5rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}

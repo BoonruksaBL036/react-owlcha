@@ -3,35 +3,41 @@
         {
             "id": "MN1",
             "imagePath": "bestseller.jpg",
-            "description": "Best Seller"
+            "description": "Best Seller",
+            "keyword": "best_seller"
         },
         {
             "id": "MN2",
             "imagePath": "classic.jpg",
-            "description": "Classic"
+            "description": "Classic",
+            "keyword": "classic"
         },
         {
             "id": "MN3",
             "imagePath": "favourite.jpg",
-            "description": "Favourite"
+            "description": "Favourite",
+            "keyword": "favorite"
         },
         {
             "id": "MN4",
             "imagePath": "freshmilk.jpg",
-            "description": "Fresh Milk"
+            "description": "Fresh Milk",
+            "keyword": "freshmilk"
         },
         {
             "id": "MN5",
             "imagePath": "choco.jpg",
-            "description": "Choco Owl"
+            "description": "Choco Owl",
+            "keyword": "chocoowl"
         },
         {
             "id": "MN6",
             "imagePath": "menusoda.jpg",
-            "description": "Soda"
+            "description": "Soda",
+            "keyword": "soda"
         }
     ],
-    "product": [
+    "products": [
         {
             "id": "BS1",
             "name": "Boba mile tea",

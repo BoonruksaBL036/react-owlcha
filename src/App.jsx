@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css'
 import { getAllMenu } from './fetch/menu'
 import { useEffect } from 'react';
+import Navbar from './assets/component/navbar';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [menu, setMenu] = useState([])
@@ -12,12 +14,7 @@ function App() {
 
   return (
     <div className='container'>
-      <nav className='nav-bar'>
-        <h1 className='owlcha-name'>Owl Cha สาขาราชภัฏนครปฐม</h1>
-        <button className='btn-home'>
-          <span>HOME</span>
-        </button>
-      </nav>
+      <Navbar/>
       <main className='main'>
         {menu.map((item) =>
           <div className={`box box-${item.id}`} key={item.id}>
@@ -25,7 +22,7 @@ function App() {
             <div className="description-container">
               <div className="description-box">
                 <h2 className='description'>{item.description}</h2>
-                <button className='btn-shop'>Read more</button>
+                <Link to={`/shop/${item.keyword}/${item.id}`} className='btn-shop'>Read more</Link>
               </div>
             </div>
           </div>

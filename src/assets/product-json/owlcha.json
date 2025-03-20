@@ -1,0 +1,367 @@
+{
+    "menu": [
+        {
+            "id": "MN1",
+            "imagePath": "bestseller.jpg",
+            "description": "Best Seller"
+        },
+        {
+            "id": "MN2",
+            "imagePath": "classic.jpg",
+            "description": "Classic"
+        },
+        {
+            "id": "MN3",
+            "imagePath": "favourite.jpg",
+            "description": "Favourite"
+        },
+        {
+            "id": "MN4",
+            "imagePath": "freshmilk.jpg",
+            "description": "Fresh Milk"
+        },
+        {
+            "id": "MN5",
+            "imagePath": "choco.jpg",
+            "description": "Choco Owl"
+        },
+        {
+            "id": "MN6",
+            "imagePath": "menusoda.jpg",
+            "description": "Soda"
+        }
+    ],
+    "product": [
+        {
+            "id": "BS1",
+            "name": "Boba mile tea",
+            "price": 24,
+            "image": "boba_milktea.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS2",
+            "name": "Violet lava boba milk tea",
+            "price": 39,
+            "image": "violet_lava_boba_milk_tae.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS3",
+            "name": "Green tea cheese",
+            "price": 39,
+            "image": "green_tea_cheese.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS4",
+            "name": "Thai tea",
+            "price": 24,
+            "image": "thai_tea.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS5",
+            "name": "Boba green tea",
+            "price": 24,
+            "image": "boba_green_tea.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS6",
+            "name": "Brown sugar milk tea",
+            "price": 39,
+            "image": "brown_sugar.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS7",
+            "name": "Cheese milk Tea",
+            "price": 39,
+            "image": "cheese_milk_tea.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "BS8",
+            "name": "Violet lava milk tea",
+            "price": 39,
+            "image": "violet_lava_milk_tea.jpg",
+            "menuId": "MN1"
+        },
+        {
+            "id": "CS1",
+            "name": "Taiwan milk tea",
+            "price": 19,
+            "image": "taiwan_milk_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS2",
+            "name": "Jassmine green tea",
+            "price": 19,
+            "image": "jassmine_green_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS3",
+            "name": "Apple tea",
+            "price": 19,
+            "image": "apple_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS4",
+            "name": "Lemon tea",
+            "price": 19,
+            "image": "lemon_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS5",
+            "name": "Starwberry tea",
+            "price": 19,
+            "image": "strawberry_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS6",
+            "name": "Blueberry tea",
+            "price": 19,
+            "image": "blueberry_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS7",
+            "name": "Passion tea",
+            "price": 19,
+            "image": "passion_fruit_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "CS8",
+            "name": "Lynchee tea",
+            "price": 19,
+            "image": "lynchee_tea.jpg",
+            "menuId": "MN2"
+        },
+        {
+            "id": "FR1",
+            "name": "Caramal milk tea",
+            "price": 24,
+            "image": "caramal_milk_tea.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FR2",
+            "name": "Mint mlik tea",
+            "price": 24,
+            "image": "mint_milk_tea.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FR3",
+            "name": "Hazeinut milk tea",
+            "price": 24,
+            "image": "hazeinut_milk_tea.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FR4",
+            "name": "Thai tea",
+            "price": 24,
+            "image": "thai_tea.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FR5",
+            "name": "Cocoa milk tea",
+            "price": 24,
+            "image": "cacao_milk_tea.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FR6",
+            "name": "Milo milk tea",
+            "price": 24,
+            "image": "milo_milk_tea.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FR7",
+            "name": "Matcha latte",
+            "price": 24,
+            "image": "matcha_latte.jpg",
+            "menuId": "MN3"
+        },
+        {
+            "id": "FM1",
+            "name": "Fresh milk",
+            "price": 29,
+            "image": "fresh_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM2",
+            "name": "Cocoa fresh milk",
+            "price": 34,
+            "image": "cocoa_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM3",
+            "name": "Mint fresh milk",
+            "price": 34,
+            "image": "mint_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM4",
+            "name": "Milo fresh milk",
+            "price": 34,
+            "image": "milo_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM5",
+            "name": "Caramal fresh milk",
+            "price": 34,
+            "image": "caramal_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM6",
+            "name": "Green tea fresh milk",
+            "price": 34,
+            "image": "green_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM7",
+            "name": "Fruity milk apple",
+            "price": 39,
+            "image": "apple_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "FM8",
+            "name": "Fruity milk strawberry",
+            "price": 39,
+            "image": "strawbarry_milk.jpg",
+            "menuId": "MN4"
+        },
+        {
+            "id": "CC1",
+            "name": "Choco owl caramal",
+            "price": 54,
+            "image": "milkcaramal_cocoa.jpg",
+            "menuId": "MN5"
+        },
+        {
+            "id": "CC2",
+            "name": "Choco owl mint",
+            "price": 54,
+            "image": "mint_cocoa_tea.jpg",
+            "menuId": "MN5"
+        },
+        {
+            "id": "CC3",
+            "name": "Choco owl thaitea",
+            "price": 44,
+            "image": "thia_cocoa_tea.jpg",
+            "menuId": "MN5"
+        },
+        {
+            "id": "SD1",
+            "name": "Starwberry soda",
+            "price": 19,
+            "image": "starwberry_soda.jpg",
+            "menuId": "MN6"
+        },
+        {
+            "id": "SD2",
+            "name": "Apple soda",
+            "price": 19,
+            "image": "apple_soda.jpg",
+            "menuId": "MN6"
+        },
+        {
+            "id": "SD3",
+            "name": "Blueberry soda",
+            "price": 19,
+            "image": "blueberry_soda.jpg",
+            "menuId": "MN6"
+        },
+        {
+            "id": "SD4",
+            "name": "Passion fruit soda",
+            "price": 19,
+            "image": "passion_fruit_sosda.jpg",
+            "menuId": "MN6"
+        },
+        {
+            "id": "SD5",
+            "name": "Lychee soda",
+            "price": 19,
+            "image": "lychee_soda.jpg",
+            "menuId": "MN6"
+        },
+        {
+            "id": "SD6",
+            "name": "Lemon soda",
+            "price": 19,
+            "image": "lemon_soda.jpg",
+            "menuId": "MN6"
+        }
+    ],
+    "topping": [
+        {
+            "id": "TP1",
+            "name": "ไข่มุก",
+            "price": 5
+        },
+        {
+            "id": "TP2",
+            "name": "เจลลี่ผลไม้",
+            "price": 5
+        },
+        {
+            "id": "TP3",
+            "name": "บุกขาว",
+            "price": 10
+        },
+        {
+            "id": "TP4",
+            "name": "คริสตัสใส",
+            "price": 10
+        },
+        {
+            "id": "TP5",
+            "name": "ซอสบราวน์ชูการ์",
+            "price": 15
+        },
+        {
+            "id": "TP6",
+            "name": "ลาวาเนื้อมันม่วง",
+            "price": 15
+        },
+        {
+            "id": "TP7",
+            "name": "ชีส",
+            "price": 20
+        }
+    ],
+    "sweet": [
+        {
+            "id": "SW1",
+            "name": "หวานน้อย"
+        },
+        {
+            "id": "SW2",
+            "name": "หวานปกติ"
+        },
+        {
+            "id": "SW3",
+            "name": "หวานมาก"
+        }
+    ]
+}

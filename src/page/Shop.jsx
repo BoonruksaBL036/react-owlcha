@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Navbar from '../assets/component/navbar'
 import { useState } from 'react'
 import { getAllProductBymenuId } from '../fetch/Product'
@@ -8,6 +8,7 @@ import { addToCart, removeForCart } from '../redux/store'
 import "../assets/css/shop.css"
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
+import Popup from '../assets/component/Popup'
 
 const Shop = () => {
     const [product, setProduct] = useState([])
@@ -16,9 +17,36 @@ const Shop = () => {
     const dispatch = useDispatch()
     const cartList = useSelector((state)=>state.cart)
     const [cart, setCart] = useState([])
+    const [ popup, setPopup ] = useState(false);
+    const [details, setDetails] = useState({ topping: [], sweet: 0 });
+
+    // const handleOpenPopup = () => {
+
+    // }
+
+    const handleSubmit = (product) => {
+        const newProduct = {
+            ...product,
+            topping: details.topping, // ดึง topping จาก Popup
+            sweet: details.sweet,     // ดึง sweet level จาก Popup
+        };
+        dispatch(addToCart(newProduct));
+        setPopup(false);
+    };
+
+    // useEffect(() => {
+    //     const doc = new jsPDF();
+
+
+    //     doc.addFileToVFS('Kanit-Regular-normal.ttf', font);
+    //     doc.addFont('Kanit-Regular-normal.ttf', 'Kanit-Regular', 'normal');
+
+    //     doc.setFont('Kanit-Regular', 'normal');
+    //   }, []);
 
     const handleexportpdf=()=>{
         const doc = new jsPDF()
+        doc.setFont('Kanit-Regular', 'normal');
         const tableColum = ["product","quantity","price","total"]
         const tableRow = cart.map((product)=>[
             product.name,
@@ -26,7 +54,7 @@ const Shop = () => {
             `${product.price}Baht`,
             `${product.total} Baht`
         ])
-        tableRow.push(["summaryprice","","",`${cartList.total}Baht`])
+        tableRow.push(["summary price","","",`${cartList.total}Baht`])
         const currentDate = new Date();
           const formattedDate = `${currentDate.getFullYear()}-${("0" + (currentDate.getDate())).slice(-2)}-${("0" + (currentDate.getMonth() + 1)).slice(-2)}`;
     
@@ -40,6 +68,14 @@ const Shop = () => {
           })
           doc.save(`bill-${formattedDate}.pdf`)
     }
+
+    useEffect(() => {
+        if (popup) {
+            document.body.classList.add('popup-open');
+        } else {
+            document.body.classList.remove('popup-open');
+        }
+    }, [popup]);
 
     useEffect(() => {
         setProduct(getAllProductBymenuId(id))
@@ -60,7 +96,7 @@ const Shop = () => {
                                 <h2>{item.name}</h2>
                                 <p>{item.price}</p>
                             </div>
-                            <button onClick={()=>dispatch(addToCart(item))}>สั่งซื้อ</button>
+                            <button onClick={()=>setPopup(item)}>สั่งซื้อ</button>
                         </div>
                     </div>
                     )}
@@ -75,6 +111,8 @@ const Shop = () => {
                                 <thead>
                                     <tr>
                                         <th>Product</th>
+                                        <th>Sweet</th>
+                                        <th>Topping</th>
                                         <th>Quantity</th>
                                         <th>Price</th>
                                         <th>Total</th>
@@ -85,6 +123,8 @@ const Shop = () => {
                                     {cart.map((item)=>(
                                         <tr key={item.id}>
                                             <td>{item.name}</td>
+                                            <td>{item.sweet}</td>
+                                            <td>{item.topping}</td>
                                             <td>{item.quantity}</td>
                                             <td>{item.price}</td>
                                             <td>{item.total}</td>
@@ -111,6 +151,17 @@ const Shop = () => {
                         </div>
                     )}
                 </div>
+            </div>
+            <div className="popup">
+            {popup && (
+            <Popup
+                    product={popup}
+                    details={details}
+                    setPopup={setPopup}
+                    setDetails={setDetails}
+                    handleSubmit={handleSubmit}
+                />
+            )}
             </div>
         </div>
     )

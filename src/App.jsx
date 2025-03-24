@@ -5,7 +5,8 @@ import { useEffect } from 'react';
 import Navbar from './assets/component/navbar';
 import { Link } from 'react-router-dom';
 
-function App() {
+function App(props) {
+  const { images } = props
   const [menu, setMenu] = useState([])
   useEffect(() => {
     console.log(getAllMenu());
@@ -14,11 +15,11 @@ function App() {
 
   return (
     <div className='container'>
-      <Navbar/>
+      <Navbar />
       <main className='main'>
         {menu.map((item) =>
           <div className={`box box-${item.id}`} key={item.id}>
-            <img className='image-menu' src={`./src/assets/image/${item.imagePath}`} alt="" />
+            <img className='image-menu' src={images[`/src/assets/image/${item.imagePath}`]?.default} alt="" />
             <div className="description-container">
               <div className="description-box">
                 <h2 className='description'>{item.description}</h2>

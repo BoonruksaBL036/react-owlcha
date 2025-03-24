@@ -9,7 +9,8 @@ import "../assets/css/shop.css"
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
 
-const Shop = () => {
+const Shop = (props) => {
+    const { images } = props
     const [product, setProduct] = useState([])
     const { id } = useParams()
     const { keyword } = useParams()
@@ -53,7 +54,7 @@ const Shop = () => {
                     {product.map((item)=>
                     <div key={item.id}className="card">
                         <div className="box-image">
-                            <img className='product-image' src={`/src/assets/image/${keyword}/${item.image}`} alt="" />
+                            <img className='product-image' src={images[`/src/assets/image/${keyword}/${item.image}`]?.default} alt="" />
                         </div>
                         <div className="product-detail">
                             <div className="detail">

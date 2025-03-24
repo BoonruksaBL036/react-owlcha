@@ -7,10 +7,10 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store.jsx'
 import Shop from './page/shop.jsx'
 
-
+const images = import.meta.glob('/src/assets/image/*', { eager: true })
 const router = createBrowserRouter([
-  { path: '/', element: <App /> },
-  { path: '/shop/:keyword/:id', element: <Shop /> }
+  { path: '/', element: <App images={images} /> },
+  { path: '/shop/:keyword/:id', element: <Shop images={images} /> }
 ])
 
 createRoot(document.getElementById('root')).render(
@@ -18,5 +18,5 @@ createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
-  </StrictMode>,
+  </StrictMode>
 )

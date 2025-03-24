@@ -7,7 +7,8 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store.jsx'
 import Shop from './page/shop.jsx'
 
-const images = import.meta.glob('/src/assets/image/*', { eager: true })
+const images = import.meta.glob('/src/assets/image/**/*.{png,jpg,jpeg,webp}', { eager: true })
+console.log(images);
 const router = createBrowserRouter([
   { path: '/', element: <App images={images} /> },
   { path: '/shop/:keyword/:id', element: <Shop images={images} /> }

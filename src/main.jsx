@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './redux/store.jsx'
-import Shop from './page/shop.jsx'
+import Shop from './page/Shop.jsx'
 
 const images = import.meta.glob('/src/assets/image/**/*.{png,jpg,jpeg,webp}', { eager: true })
 console.log(images);

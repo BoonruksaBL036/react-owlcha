@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Navbar from "../assets/component/navbar";
+import Navbar from "../assets/component/Navbar";
 import { useState } from "react";
 import { getAllProductBymenuId } from "../fetch/Product";
 import { useParams } from "react-router-dom";

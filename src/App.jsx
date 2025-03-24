@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import { getAllMenu } from './fetch/menu'
 import { useEffect } from 'react';
-import Navbar from './assets/component/navbar';
+import Navbar from './assets/component/Navbar';
 import { Link } from 'react-router-dom';
 
 function App(props) {

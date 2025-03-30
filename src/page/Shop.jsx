@@ -158,7 +158,7 @@ const Shop = (props) => {
                 >
                   export pdf
                 </button>
-                <button className="addline-btn table-btn">add line</button>
+                <button onClick={()=>window.open("https://lin.ee/Dxtks7G","_blank")} className="addline-btn table-btn">add line</button>
               </div>
             </div>
           ) : (
